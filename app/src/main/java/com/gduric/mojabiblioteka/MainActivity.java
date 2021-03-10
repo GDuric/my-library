@@ -1,6 +1,8 @@
 package com.gduric.mojabiblioteka;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -23,5 +25,9 @@ public class MainActivity extends AppCompatActivity {
         btnToRead = findViewById(R.id.btnToRead);
         btnFavourites = findViewById(R.id.btnFavourites);
         btnAbout = findViewById(R.id.btnAbout);
+    }
+    public void showAllBooks(View view){
+        Intent allBooksList = new Intent(getApplicationContext(), AllBooksActivity.class);
+        startActivity(allBooksList);
     }
 }
