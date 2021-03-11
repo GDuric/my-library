@@ -81,4 +81,17 @@ public class Utils {
         }
         return null;
     }
+
+    public boolean addToAlreadyRead(Book b){
+        return alreadyReadBooks.add(b);
+    }
+    public boolean addToWantToRead(Book b){
+        return wantToReadBooks.add(b);
+    }
+    public boolean addToFavouriteBooks(Book b){
+        return favouriteBooks.add(b);
+    }
+    public boolean addToCurrentlyReadingBooks(Book b){
+        return currentlyReadingBooks.add(b);
+    }
 }

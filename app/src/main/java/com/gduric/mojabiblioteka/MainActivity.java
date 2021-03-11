@@ -16,6 +16,40 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         initViews();
+
+        btnAllBooks.setOnClickListener((x) -> {
+            Intent intent = new Intent(MainActivity.this, AllBooksActivity.class);
+            startActivity(intent);
+        });
+        btnAlreadyRead.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                Intent intent = new Intent(MainActivity.this, AlreadyReadBooksActivity.class);
+                startActivity(intent);
+            }
+        });
+        btnToRead.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                Intent intent = new Intent(MainActivity.this, WantToReadBooksActivity.class);
+                startActivity(intent);
+            }
+        });
+        btnFavourites.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                Intent intent = new Intent(MainActivity.this, FavouriteBooksActivity.class);
+                startActivity(intent);
+            }
+        });
+        btnCurrentlyReading.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                Intent intent = new Intent(MainActivity.this, CurrentlyReadingBooksActivity.class);
+                startActivity(intent);
+            }
+        });
+        Utils.getInstance();
     }
 
     private void initViews() {
